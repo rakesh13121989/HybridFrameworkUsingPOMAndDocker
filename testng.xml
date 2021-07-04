@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite">
+
+  <test name="ParallelTest" >
+ <classes>
+ <class name="TestCases.RegistrationTestCase" />
+ <class name="TestCases.RegistrationPageTestCase" />
+
+ </classes>
+    
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

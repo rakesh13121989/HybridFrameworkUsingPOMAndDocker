@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="19710" started-at="2021-07-04T06:56:41Z" finished-at="2021-07-04T06:57:00Z">
+    <groups>
+    </groups>
+    <test name="ParallelTest" duration-ms="19710" started-at="2021-07-04T06:56:41Z" finished-at="2021-07-04T06:57:00Z">
+      <class name="TestCases.RegistrationTestCase">
+        <test-method status="PASS" signature="initialize(java.lang.String)[pri:0, instance:TestCases.RegistrationTestCase@72b6cbcc]" name="initialize" is-config="true" duration-ms="5757" started-at="2021-07-04T06:56:41Z" finished-at="2021-07-04T06:56:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="emailEnter()[pri:0, instance:TestCases.RegistrationTestCase@72b6cbcc]" name="emailEnter" duration-ms="2763" started-at="2021-07-04T06:56:46Z" finished-at="2021-07-04T06:56:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailEnter -->
+        <test-method status="PASS" signature="ReportLogging(org.testng.ITestResult)[pri:0, instance:TestCases.RegistrationTestCase@72b6cbcc]" name="ReportLogging" is-config="true" duration-ms="10" started-at="2021-07-04T06:56:49Z" finished-at="2021-07-04T06:56:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=emailEnter status=SUCCESS method=RegistrationTestCase.emailEnter()[pri:0, instance:TestCases.RegistrationTestCase@72b6cbcc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReportLogging -->
+        <test-method status="FAIL" signature="registration()[pri:1, instance:TestCases.RegistrationTestCase@72b6cbcc]" name="registration" duration-ms="26" started-at="2021-07-04T06:57:00Z" finished-at="2021-07-04T06:57:00Z">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
+System info: host: 'RINMAC770', ip: 'fe80:0:0:0:894:ac6d:ca71:4076%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, findElement {using=xpath, value=//input[@placeholder='First Name']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: /var/folders/vb/3c3gb6ms0zd...}, goog:chromeOptions: {debuggerAddress: localhost:64727}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:64727/devtoo..., se:cdpVersion: 91.0.4472.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
+System info: host: 'RINMAC770', ip: 'fe80:0:0:0:894:ac6d:ca71:4076%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, findElement {using=xpath, value=//input[@placeholder='First Name']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: /var/folders/vb/3c3gb6ms0zd...}, goog:chromeOptions: {debuggerAddress: localhost:64727}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:64727/devtoo..., se:cdpVersion: 91.0.4472.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:145)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at com.sun.proxy.$Proxy18.sendKeys(Unknown Source)
+at PageObjects.registrationPage.registration(registrationPage.java:33)
+at TestCases.RegistrationTestCase.registration(RegistrationTestCase.java:46)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registration -->
+        <test-method status="FAIL" signature="ReportLogging(org.testng.ITestResult)[pri:0, instance:TestCases.RegistrationTestCase@72b6cbcc]" name="ReportLogging" is-config="true" duration-ms="3" started-at="2021-07-04T06:57:00Z" finished-at="2021-07-04T06:57:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=registration status=FAILURE method=RegistrationTestCase.registration()[pri:1, instance:TestCases.RegistrationTestCase@72b6cbcc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
+System info: host: 'RINMAC770', ip: 'fe80:0:0:0:894:ac6d:ca71:4076%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: /var/folders/vb/3c3gb6ms0zd...}, goog:chromeOptions: {debuggerAddress: localhost:64727}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:64727/devtoo..., se:cdpVersion: 91.0.4472.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
+System info: host: 'RINMAC770', ip: 'fe80:0:0:0:894:ac6d:ca71:4076%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: /var/folders/vb/3c3gb6ms0zd...}, goog:chromeOptions: {debuggerAddress: localhost:64727}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:64727/devtoo..., se:cdpVersion: 91.0.4472.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:145)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:667)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:347)
+at Utility.Utilities.getScreenshot(Utilities.java:63)
+at Utility.Utilities.LogReport(Utilities.java:82)
+at TestCases.RegistrationTestCase.ReportLogging(RegistrationTestCase.java:76)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReportLogging -->
+        <test-method status="SKIP" signature="endReport()[pri:0, instance:TestCases.RegistrationTestCase@72b6cbcc]" name="endReport" is-config="true" duration-ms="0" started-at="2021-07-04T06:57:00Z" finished-at="2021-07-04T06:57:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- TestCases.RegistrationTestCase -->
+      <class name="TestCases.RegistrationPageTestCase">
+        <test-method status="PASS" signature="initialize(java.lang.String)[pri:0, instance:TestCases.RegistrationPageTestCase@a7e666]" name="initialize" is-config="true" duration-ms="3575" started-at="2021-07-04T06:56:49Z" finished-at="2021-07-04T06:56:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="registrationPageTestCases()[pri:0, instance:TestCases.RegistrationPageTestCase@a7e666]" name="registrationPageTestCases" duration-ms="3154" started-at="2021-07-04T06:56:53Z" finished-at="2021-07-04T06:56:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationPageTestCases -->
+        <test-method status="PASS" signature="ReportLogging(org.testng.ITestResult)[pri:0, instance:TestCases.RegistrationPageTestCase@a7e666]" name="ReportLogging" is-config="true" duration-ms="114" started-at="2021-07-04T06:56:56Z" finished-at="2021-07-04T06:56:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=registrationPageTestCases status=SUCCESS method=RegistrationPageTestCase.registrationPageTestCases()[pri:0, instance:TestCases.RegistrationPageTestCase@a7e666] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReportLogging -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:TestCases.RegistrationPageTestCase@a7e666]" name="endReport" is-config="true" duration-ms="4281" started-at="2021-07-04T06:56:56Z" finished-at="2021-07-04T06:57:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- TestCases.RegistrationPageTestCase -->
+    </test> <!-- ParallelTest -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,12 +1,7 @@
 package TestCases;
 
-import java.io.IOException;
-
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import Base.Base;
@@ -22,7 +17,7 @@ public class AddToCartTestcases extends Base {
     @Test
     public void SearchProduct() throws InterruptedException
     {
-    	test=extent.createTest("Search product");
+
         productListingPage = homePageAmazon.SearchProduct("Headphones");
         Thread.sleep(3000);
     	status=Utilities.VerifyElementPresent(productListingPage.BestSellerProducts.get(0));
@@ -33,7 +28,7 @@ public class AddToCartTestcases extends Base {
 
     @Test
     public void SearchProduct1() throws InterruptedException {
-        test = extent.createTest("Search product2");
+
         productListingPage = homePageAmazon.SearchProduct("earphone");
         Thread.sleep(3000);
         status = Utilities.VerifyElementPresent(productListingPage.BestSellerProducts.get(0));
@@ -79,22 +74,5 @@ public class AddToCartTestcases extends Base {
 
     }
 
-    // This method will execute after every test method and status of the test case will be captured by ItestResult object
-    // and based on the status report is generated and captured in extent report html file . If any fail will be there then
-    // screenshot will be captured and will be included in the same html report with failed status of the particular test
-    @AfterMethod
-    public void ReportLogging( final ITestResult result) throws IOException {
-        utilities.LogReport(result, test);
-    	softAssert.assertAll();
 
-    }
-    //This method will execute once all the test execution is done
-
-    @AfterClass
-    public void endReport() {
-        driver.quit();
-    System.out.println("Inside EndReport(After Test) method");
-     extent.flush();
-
-    }
 }

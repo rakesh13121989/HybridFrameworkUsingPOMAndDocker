@@ -11,16 +11,16 @@ import Base.Base;
 public class registrationPage extends Base {
 
     @FindBy(xpath = "//input[@placeholder='First Name']")
-    WebElement firstName;
+    public WebElement firstName;
 
     @FindBy(xpath = "//input[@placeholder='Last Name']")
-    WebElement lastName;
+    public WebElement lastName;
 
     @FindBy(xpath = "//input[@type='email']")
-    WebElement emailBox;
+    public WebElement emailBox;
 
     @FindBy(xpath = "//input[@type='tel']")
-    WebElement phone;
+    public WebElement phone;
 
     WebDriver driver;
 

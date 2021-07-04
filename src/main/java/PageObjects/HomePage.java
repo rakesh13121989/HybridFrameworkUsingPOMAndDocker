@@ -10,10 +10,10 @@ import Base.Base;
 public class HomePage extends Base {
 
     @FindBy(xpath = "//input")
-    WebElement emailBox;
+    public WebElement emailBox;
 
     @FindBy(id = "enterimg")
-    WebElement goButton;
+    public WebElement goButton;
 
     WebDriver driver;
 
@@ -27,8 +27,6 @@ public class HomePage extends Base {
 
         emailBox.sendKeys("abcd@gmail.com");
         goButton.click();
-
-
 
     }
 

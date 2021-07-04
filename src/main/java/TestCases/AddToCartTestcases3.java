@@ -19,7 +19,7 @@ public class AddToCartTestcases3 extends Base {
 
 
 	//Search for Headphone and verify that atleast one product with Best Seller is displayed after search
-    @Test(priority=0)
+    @Test
     public void SearchProduct() throws InterruptedException
     {
     	test=extent.createTest("Search product");
@@ -31,7 +31,7 @@ public class AddToCartTestcases3 extends Base {
 
     }
 
-    @Test(priority = 0)
+    @Test
     public void SearchProduct1() throws InterruptedException {
         test = extent.createTest("Search product2");
         productListingPage = homePageAmazon.SearchProduct("earphone");
@@ -42,7 +42,7 @@ public class AddToCartTestcases3 extends Base {
 
     }
    // This test is for adding all the Best selling products into cart
-    @Test(priority = 1)
+    @Test
     public void AddProductToCart() throws InterruptedException
     {
     	System.out.println("Inside AddProductToCart test");

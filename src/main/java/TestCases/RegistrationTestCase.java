@@ -5,37 +5,20 @@ import java.io.IOException;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import Base.Base;
-import PageObjects.HomePage;
-import PageObjects.registrationPage;
-import Utility.Utilities;
 
 public class RegistrationTestCase extends Base {
 
 
 
 
-    @BeforeClass
-    @Parameters("Browser")
-    public void initialize(@Optional("") final String Browser) {
-
-        getDriver("chrome");
-        homePage = new HomePage();
-        utilities = new Utilities();
-        regisPage = new registrationPage();
-
-    }
-
     @Test(priority=0)
     public void emailEnter()
     {
 
-        regisPage = homePage.enterEmail();
+        homePage.enterEmail();
 
 
     }
@@ -43,7 +26,7 @@ public class RegistrationTestCase extends Base {
     @Test(priority = 1)
     public void registration() {
 
-        regisPage.registration();
+        registrationPage.registration();
 
     }
 
@@ -56,12 +39,7 @@ public class RegistrationTestCase extends Base {
         System.out.println("Inside EndReport(After Test) method");
         driver.quit();
         extent.flush();
-        try {
-            Thread.sleep(4000);
-        } catch (final InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+
     }
 
     // This method will execute after every test method and status of the test case

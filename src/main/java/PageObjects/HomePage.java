@@ -1,5 +1,6 @@
 package PageObjects;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -14,19 +15,19 @@ public class HomePage extends Base {
     @FindBy(id = "enterimg")
     WebElement goButton;
 
+    WebDriver driver;
+
     // Loading and initializing the objects
-    public HomePage() {
-
+    public HomePage(final WebDriver driver) {
         PageFactory.initElements(driver, this);
-
-
+        this.driver = driver;
     }
 
-    public registrationPage enterEmail() {
+    public void enterEmail() {
 
         emailBox.sendKeys("abcd@gmail.com");
         goButton.click();
-        return (new registrationPage());
+
 
 
     }

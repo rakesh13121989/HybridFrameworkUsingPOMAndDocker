@@ -2,10 +2,11 @@
 
 <suite name="Suite">
 
-  <test name="ParallelTest" >
+  <test name="ParallelTest"  >
  <classes>
- <class name="TestCases.RegistrationTestCase" />
- <class name="TestCases.RegistrationPageTestCase" />
+ <class name="TestCases.AddToCartTestcases" />
+ <class name="TestCases.AddToCartTestcases2" />
+ <class name="TestCases.AddToCartTestcases3" />
 
  </classes>
     

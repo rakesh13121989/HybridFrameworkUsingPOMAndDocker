@@ -1,9 +1,8 @@
 package Utility;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.URISyntaxException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
@@ -24,36 +23,44 @@ import Base.Base;
 
 public class Utilities extends Base {
 
+    WebDriver driver;
 
     // Loading and initializing the driver
 
+    public Utilities(final WebDriver driver) {
 
-    public Utilities() {
-
+        this.driver = driver;
     }
 
 	public static String GetPropertyValue(final String PropertyName) throws IOException
 	{
 		final Properties props= new Properties();
         System.out.println("Inside GetPropertyValue method");
-        /*
-         * final FileInputStream ip = new FileInputStream(
-         * System.getProperty("user.dir") + "/src/main/resources/Config.properties");
-         * props.load(ip);
-         */
-        final ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        File file = null;
+        final File file = null;
         try {
-            file = new File(classLoader.getResource("Config.properties").toURI());
-        } catch (final URISyntaxException e) {
+            // final ClassLoader classLoader =
+            // Thread.currentThread().getContextClassLoader();
+            // file = new File(classLoader.getResource("Config.properties").toURI());
+            // final URL url = Utilities.class.getResource("/Config.properties");
+            // file = new File(url.getPath());
+            // props.load(new FileInputStream(file));
+
+
+            final InputStream inputstream = Utilities.class.getResourceAsStream("/Config.properties");
+            props.load(inputstream);
+
+        } catch (final Exception e) {
 
             e.printStackTrace();
+            System.out.println(e.getMessage());
         }
 
-        System.out.println("property file =" + file);
-        props.load(new FileInputStream(file));
+
+
 		//String Androidversion=props.getProperty("androidVersion");
+        System.out.println("Property value of " + PropertyName + "=" + props.getProperty(PropertyName));
         return (props.getProperty(PropertyName));
+
     }
 
     public String getScreenshot(final String screenshotName) throws IOException {
@@ -63,7 +70,7 @@ public class Utilities extends Base {
 		  final File source = ts.getScreenshotAs(OutputType.FILE);
 
 		  // after execution, you could see a folder "FailedTestsScreenshots" under src folder
-        final String destination = System.getProperty("user.dir") + "/src/main/java/resources" + "/Screenshots/"
+        final String destination = System.getProperty("user.dir") + "/src/main/resources" + "/Screenshots/"
                 + dateFolder + "/" + screenshotName + dateName + ".png";
 		  final File finalDestination = new File(destination);
 		  FileUtils.copyFile(source, finalDestination);

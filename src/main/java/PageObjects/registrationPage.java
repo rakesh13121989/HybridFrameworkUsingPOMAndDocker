@@ -1,5 +1,6 @@
 package PageObjects;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -21,11 +22,12 @@ public class registrationPage extends Base {
     @FindBy(xpath = "//input[@type='tel']")
     WebElement phone;
 
+    WebDriver driver;
+
     // Loading and initializing the objects
-    public registrationPage() {
+    public registrationPage(final WebDriver driver) {
         PageFactory.initElements(driver, this);
-
-
+        this.driver = driver;
     }
 
     public void registration() {
